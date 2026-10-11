@@ -1,3 +1,22 @@
+# techmeets Month 4（Week 14〜17）
+
+techmeets の Month 4 の課題をまとめたリポジトリです。
+Week 7 から作ってきた Laravel ブログアプリを、**Week 17 終了時点**の状態で保存しています（元の開発は [techmeets-month2](https://github.com/tomoki-omigawa-tech/techmeets-month2) で行い、その時点のものをコピーしました）。
+
+| Week | テーマ | 内容 | 場所 |
+|---|---|---|---|
+| Week 14 | テスト設計＋品質管理 | PHPUnit で PostService の Unit テスト・PostController の Feature テスト（認可を含む）、TDD でいいね機能を実装。カバレッジ 70% 超 | コミット `f7a9f8f` |
+| Week 15 | CI/CD 基礎（GitHub Actions） | PHP CS Fixer（PSR-12）・PHPStan（Larastan）の導入、lint・test（カバレッジ付き）・SSH 自動デプロイのワークフロー | コミット `29bab99`〜`3c45291`、`.github/workflows/` |
+| Week 16 | Docker 応用＋CI/CD 実践 | マルチステージ Dockerfile（814MB → 325MB）、非 root ユーザー・ヘルスチェック、Trivy による脆弱性スキャン、ログのローテーション設定 | コミット `fb95cc7`、`docker/php/Dockerfile.prod` |
+| Week 17 | パフォーマンス最適化 | N+1 の解消、インデックス追加、Redis キャッシュ、静的ファイルのキャッシュヘッダー、アップロード画像の WebP 変換＋CloudFront 配信 | [`docs/week17-performance.md`](docs/week17-performance.md)（元の PR：month2 の #8〜#11） |
+
+※ このコピーでは本番サーバーへの自動デプロイ（`deploy.yml`）を外しています。本番（tomoki-omigawa.com）へのデプロイ設定は techmeets-month2 にあります。
+
+- Month 3（Week 10〜13）：[techmeets-month3](https://github.com/tomoki-omigawa-tech/techmeets-month3)
+- Month 5（Week 18〜21）：[techmeets-month5](https://github.com/tomoki-omigawa-tech/techmeets-month5)
+
+---
+
 # ブログシステム（Week7〜8 課題）
 
 LaravelのMVCパターンで作成したブログシステムです。投稿のCRUD機能、カテゴリー分類、ページネーション、バリデーションに加え、Week8でLaravel Breezeによる認証・認可機能を実装しました。
